@@ -10,13 +10,14 @@ namespace teht19
     {
         public static string formatoisana(string nakyvasana, string arvattavasana, char arvattukirjain)
         {
-            char[] temp = nakyvasana.ToArray();
-            int index = arvattavasana.IndexOf(arvattukirjain);
-            temp[index] = arvattukirjain;
-            while (index != -1)
+            List<int> loydetytindexit = new List<int>();
+            for (int i = arvattavasana.IndexOf(arvattukirjain); i > -1; i = arvattavasana.IndexOf(arvattukirjain, i + 1))
             {
-                index = arvattavasana.IndexOf(arvattavasana, index + 1);
-                if (index == -1) { break; }
+                loydetytindexit.Add(i);
+            }
+            char[] temp = nakyvasana.ToArray();
+            foreach (int index in loydetytindexit)
+            {
                 temp[index] = arvattukirjain;
             }
             nakyvasana = new string(temp);
@@ -27,7 +28,7 @@ namespace teht19
         {
             string[] sanat =
             {
-                "koira", "kissa","petteri","mutsi","johtaja","hirsipuu","yliopisto"
+                "koira", "kissa","morjenttes","osuuspankki","erikoinen","hirsipuu","basisti"
             };
             Random r = new Random();
             int randomindex = r.Next(0, 6);
@@ -38,8 +39,8 @@ namespace teht19
             string arvaus;
             char arvattukirjain;
             int arvauslaskuri = 8;
-            Console.Write("Hirsipuu peli!");
-            Console.WriteLine("Sanan pituus on " + arvattavasana.Length + " kirjainta");
+            Console.WriteLine("Hirsipuu peli!" + " Sanan pituus on " + arvattavasana.Length + " kirjainta");
+            Console.WriteLine();
             while (peli != false)
             {
                 Console.WriteLine("Arvaa kirjain > ");
@@ -47,14 +48,25 @@ namespace teht19
                 arvattukirjain = arvaus[0]; 
                 if (arvattavasana.Contains(arvaus) == true)
                 {
-                    nakyvasana = formatoisana(nakyvasana, arvattavasana,arvattukirjain);
+                    nakyvasana = formatoisana(nakyvasana, arvattavasana, arvattukirjain);
                     Console.WriteLine(nakyvasana);
+                    if (nakyvasana.Equals(arvattavasana))
+                    {
+                        Console.WriteLine("Arvasit sanan oikein, voitit pelin");
+                        peli = false;
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Arvasit väärin, sinulla on " + arvauslaskuri + " arvausta jäljellä");
                 }
+                if (arvauslaskuri == 0)
+                {
+                    peli = false;
+                    Console.WriteLine("Hävisit pelin, sana oli " + arvattavasana);
+                }
                 arvauslaskuri--;
+
 
             }
         }
