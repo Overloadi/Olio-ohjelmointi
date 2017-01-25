@@ -18,11 +18,11 @@ namespace teht20
             Random r = new Random();
             int rand;
             string sana;
+            Stopwatch kello = new Stopwatch();
             while (peli == true)
             {
                 rand = r.Next(0, 10);
                 sana = sanat[rand];
-                Stopwatch kello = new Stopwatch();
                 Console.WriteLine("Kirjoita seuraava sana oikein mahdollisimman nopeasti, paina enter kun olet valmis ");
                 string j = Console.ReadLine();
                 Console.WriteLine(sana);
@@ -41,6 +41,7 @@ namespace teht20
                 {
                     Console.WriteLine("Kirjoitit sanan väärin");
                 }
+                kello.Reset();
             }
         }
     }
