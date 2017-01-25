@@ -31,6 +31,7 @@ namespace teht17
             {
                 Console.Write(luku + " ");
             }
+//asd
         }
     }
 }
