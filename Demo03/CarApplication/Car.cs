@@ -21,13 +21,13 @@ namespace CarApplication
         // method to give more speed
         public void Accelerate()
         {
-            Speed += 5;
+            Speed += 10;
         }
 
         // method to slow down
-        public void Brake()
+        public void Brake(int value)
         {
-            Speed -= 5;
+            Speed -= value;
         }
 
         // method to display car data
