@@ -12,7 +12,13 @@ namespace teht03
         {
             Television tv = new Television();
             tv.turnOn(true);
-
+            tv.setChannel(20);
+            tv.volumeUp();
+            tv.volumeUp();
+            tv.volumeUp();
+            tv.volumeUp();
+            tv.volumeUp();
+            tv.volumeUp();
         }
     }
 }
