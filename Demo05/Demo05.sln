@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teht01", "teht01\teht01.csproj", "{EFA55538-7CF1-4DEB-8F0D-3D1B87D7A091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teht02", "teht02\teht02.csproj", "{94CD6234-1F33-4A13-8EFD-C83EBE7C71D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFA55538-7CF1-4DEB-8F0D-3D1B87D7A091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA55538-7CF1-4DEB-8F0D-3D1B87D7A091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA55538-7CF1-4DEB-8F0D-3D1B87D7A091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA55538-7CF1-4DEB-8F0D-3D1B87D7A091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CD6234-1F33-4A13-8EFD-C83EBE7C71D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CD6234-1F33-4A13-8EFD-C83EBE7C71D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CD6234-1F33-4A13-8EFD-C83EBE7C71D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CD6234-1F33-4A13-8EFD-C83EBE7C71D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
