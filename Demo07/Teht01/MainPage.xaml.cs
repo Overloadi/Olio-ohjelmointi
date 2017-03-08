@@ -55,12 +55,12 @@ namespace Teht01
                 rows.Add(temp2);
                 randomNumbers.Clear();
             }
-            
+            randomNumbersTextBlock.Text = String.Join(String.Empty, rows.ToArray());
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
-
+            randomNumbersTextBlock.Text = "";
         }
     }
 }
