@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MazeGame
+namespace MazePuzzle
 {
-    class Maze
+    class Box
     {
-        Box[] boxes;
-        int rowCount;
-        int columnCount;
+        bool passable;
+        int rowCoordinate;
+        int columnCoordinate;
     }
 }
